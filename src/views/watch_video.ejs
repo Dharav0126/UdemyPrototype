@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="head">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta name="robots" content="noindex, nofollow" >
+    <!-- add the CSS -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- FOnt Awesome Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Watch-video Page</title>
+  </head>
+  <body>
+    <!-- header section Starts -->
+    <header class="header"></header>
+    <!-- header section ends -->
+    <!-- side bar section starts -->
+    <div class="side-bar">
+        <div class="close-side-bar">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="profile">
+            <img src="/IMG/defaltloginimage.png" alt="">
+            <% if (user) { %>
+                <h3><%= user.name %></h3>
+                <span>Student</span>
+                <a href="profile.ejs" class="btn">View Profile</a>
+                <a href="/api/auth/logout" class="btn">Logout</a>
+            <% } else { %>
+                <div class="flex-btn">
+                    <a href="login.ejs" class="option-btn">login</a>
+                    <a href="register.ejs" class="option-btn">Register</a>
+                </div>
+            <% } %>
+        </div>
+
+        <nav class="navbar">
+            <a href="home.ejs"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="about.ejs"><i class="fas fa-question"></i><span>About Us</span></a>
+            <a href="courses.ejs"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+            <a href="teachers.ejs"><i class="fas fa-chalkboard-user"></i><span>Tutors</span></a>
+            <a href="blog.ejs"><i class="fas fa-blog"></i><span>Blogs</span></a>
+            <a href="contact.ejs"><i class="fas fa-headset"></i><span>Contact Us</span></a>
+        </nav>
+    </div>
+
+  <!-- side bar section ends -->
+  <!-- watch video section starts -->
+
+  <section class="watch-video">
+
+   <div class="video-details">
+    <video src="../IMG//vid-1.mp4" class="video" poster="../IMG/post-1-1.png" controls autoplay></video>
+    <h3 class="title">Complete HTML tutorial (part 01)</h3>
+    <div class="info">
+      <p><i class="fas fa-calendar"></i><span>21-25-2022</span></p>
+      <p><i class="fas fa-heart"></i><span>45 Likes</span></p>
+    </div>
+    <div class="tutor">
+      <img src="../IMG/pic-2.jpg" alt="">
+      <div>
+        <h3>John Deo</h3>
+        <span>Developer</span>
+      </div>
+    </div>
+    <form action="" method="post" class="flex">
+      <a href="playlist.ejs" class="inline-btn">View Playlist</a>
+      <button type="submit"><i class="far fa-heart"></i><span>Like</span></button>
+    </form>
+    <div class="description">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo enim nam sapiente minus fugit autem quam molestiae asperiores quae nostrum fugiat, incidunt quasi delectus iusto nemo porro. Nostrum, doloribus necessitatibus.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores mollitia voluptatum numquam quam modi, vel itaque quas similique qui eos odit, eveniet sequi</p>
+    </div>
+   </div>
+
+  </section>
+
+  <!-- watch video section ends -->
+  <!-- Comments section starts -->
+
+  <section class="comment">
+
+    <h1 class="heading">Add Comment</h1>
+
+    <form action=""  method="post" class="add-comment">
+      <h3>Add Comment</h3>
+      <textarea name="comment_box" required  placeholder="Write your Comment....." maxlength="1000" cols="30" rows="10"></textarea>
+      <input type="submit" value="add comment" name="add_comment" class="inline-btn">
+    </form>
+
+    <h1 class="heading">6 Comments</h1>
+
+    <div class="show-comments">
+      <div class="box">
+        <div class="user">
+          <img src="../IMG/pic-1.jpg" alt="">
+          <div>
+            <h3>Shaikh Anas</h3>
+            <span>21-25-2022</span>
+          </div>
+        </div>
+        <p class="text">This is a comment from shaikh anas</p>
+        <form action="" method="post" class="flex-btn">
+          <button type="submit" name="Edit_comment" class="inline-option-btn">Edit Comment</button>
+          <button type="submit" name="Delete_comment" class="inline-delete-btn">Delete Comment</button>
+        </form>
+      </div>
+      <div class="box">
+        <div class="user">
+          <img src="../IMG/pic-1.jpg" alt="">
+          <div>
+            <h3>John Deo</h3>
+            <span>21-25-2022</span>
+          </div>
+        </div>
+        <p class="text">Wow Amazing Video! Thanks for the Sources</p>
+      </div>
+      <div class="box">
+        <div class="user">
+          <img src="../IMG/pic-2.jpg" alt="">
+          <div>
+            <h3>John Deo</h3>
+            <span>21-25-2022</span>
+          </div>
+        </div>
+        <p class="text">Wow Amazing Video! Thanks for the Sources</p>
+      </div>
+      <div class="box">
+        <div class="user">
+          <img src="../IMG/pic-3.jpg" alt="">
+          <div>
+            <h3>John Deo</h3>
+            <span>21-25-2022</span>
+          </div>
+        </div>
+        <p class="text">Wow Amazing Video! Thanks for the Sources</p>
+      </div>
+      <div class="box">
+        <div class="user">
+          <img src="../IMG/pic-4.jpg" alt="">
+          <div>
+            <h3>John Deo</h3>
+            <span>21-25-2022</span>
+          </div>
+        </div>
+        <p class="text">Wow Amazing Video! Thanks for the Sources</p>
+      </div>
+      <div class="box">
+        <div class="user">
+          <img src="../IMG/pic-5.jpg" alt="">
+          <div>
+            <h3>John Deo</h3>
+            <span>21-25-2022</span>
+          </div>
+        </div>
+        <p class="text">Wow Amazing Video! Thanks for the Sources</p>
+      </div>
+      <div class="box">
+        <div class="user">
+          <img src="../IMG/pic-6.jpg" alt="">
+          <div>
+            <h3>John Deo</h3>
+            <span>21-25-2022</span>
+          </div>
+        </div>
+        <p class="text">Wow Amazing Video! Thanks for the Sources</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comments section ends -->
+
+   <!-- footer section starts -->
+
+   
+    <footer class="footer"></footer>
+    <!-- footer section ends -->
+    <!-- custom js file link  -->
+    <script type="text/javascript" src="../JS/javascript.js"></script>
+  </body>
+</html>
